@@ -12,8 +12,6 @@ eza 0.23.4-1
 
 fastfetch 2.58.0-1
 
-firefox 147.0.3-2
-
 fish 4.4.0-1
 
 git 2.53.0-1
@@ -39,8 +37,6 @@ rofi 2.0.0-1
 sway 1:1.11-1
 
 swaync 0.12.4-1
-
-swww 0.11.2-1
 
 ttf-font-awesome-5 5.15.4-1
 
