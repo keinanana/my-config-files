@@ -1,0 +1,148 @@
+
+{
+     "position": "top",
+    "height": 5,
+    "modules-left": ["hyprland/workspaces", "hyprland/mode", "custom/media","tray"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["bluetooth","pulseaudio", "network", "backlight", "hyprland/language", "clock"],
+    "hyprland/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "mpd": {
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "unknown-tag": "N/A",
+        "interval": 2,
+        "consume-icons": {
+            "on": ""
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ",
+            "on": ""
+        },
+        "repeat-icons": {
+            "on": ""
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        "spacing": 12
+    },
+    "clock": {
+        "format": " {:%H:%M}",
+        "format-alt": " {:%d-%m-%Y}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+                    "mode"          : "mouth",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "right",
+                    "on-scroll"     : 1,
+                    "format": {
+                              "months":     "<span color='#AE81FF'><b>{}</b></span>",
+                              "days":       "<span color='#F8F8F2'><b>{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              }
+                    },
+        "actions":  {
+                    "on-click-right": "mode",
+                    }
+    },
+    "cpu": {
+        "format": "{usage}%  ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}%  "
+    },
+    "backlight": {
+        "tooltip": false,
+        "on-scroll-up": "brightnessctl set +5%",
+        "on-scroll-down": "current=$(brightnessctl g); [ $current -gt 50 ] && brightnessctl set 5%-",
+        "format": "{percent}% {icon} ",
+        "format-icons": ["", ""]
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% ",
+        "format-charging": "{capacity}%",
+        "format-plugged": "{capacity}%",
+        "format-alt": "{time} "
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "hyprland/window": {
+        "max-length": 50
+    },
+
+    "network": {
+        "format-wifi": "{essid} {icon}",
+        "format-icons": [""],
+        "format-ethernet": " {ifname}",
+        "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>",
+        "format-linked": " {ifname} (No IP)",
+        "format-disconnected": "Disconnected ⚠ {ifname}",
+        "format-alt": " {bandwidthDownBits}  {bandwidthUpBits}",
+        "interval": 2,
+    },
+    "pulseaudio": {
+        "tooltip": false,
+        "scroll-step": 5,
+        "format": "{icon} {volume}% {format_source}",
+        "format-bluetooth": "{icon} {volume}% {format_source}",
+        "format-bluetooth-muted": " {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "",
+        "format-source-muted": "",
+        "format-icons": {
+            "default": [
+                " ",
+                " ",
+                "  "
+            ]
+      },
+      "on-click": "pavucontrol",
+  },
+  "bluetooth": {
+    "format": " {status}",
+    "format-connected": " {status}",
+    "on-click": "blueman-manager",
+    "tooltip-format": "Name: <big><b>{device_alias}</b></big>\nBattery: <b>{device_battery_percentage}%</b>\nAddress: <b>{device_address}</b>",
+    "interval": 60,
+},
+    "custom/media": {
+        "format": " {}",
+        "return-type": "json",
+        "max-length": 40,
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+    "hyprland/language": {
+        "format": "{}",
+        "format-th": "TH",
+        "format-en": "US",
+        "keyboard-name": "at-translated-set-2-keyboard"
+    }
+}
