@@ -1,53 +1,53 @@
 [installed package]
 
-blueman 2.4.6-2
+blueman 
 
-bluez 5.85-1
+bluez 
 
-bluez-utils 5.85-1
+bluez-utils 
 
-brightnessctl 0.5.1-3
+brightnessctl 
 
-eza 0.23.4-1
+eza 
 
-fastfetch 2.58.0-1
+fastfetch
 
-fish 4.4.0-1
+fish 
 
-git 2.53.0-1
+git 
 
-hyprland 0.53.3-2
+hyprland
 
-hyprlock 0.9.2-8
+hyprlock 
 
-hyprpaper 0.8.3-2
+hyprpaper 
 
-jq 1.8.1-1
+jq 
 
-less 1:692-1
+less
 
-noto-fonts-cjk 20240730-1
+noto-fonts-cjk
 
-pavucontrol 1:6.2-1
+pavucontrol
 
-powerline-fonts 2.8.4-4
+powerline-fonts
 
-rofi 2.0.0-1
+rofi
 
-sway 1:1.11-1
+swaync
 
-swaync 0.12.4-1
+ttf-font-awesome-5
 
-ttf-font-awesome-5 5.15.4-1
+ttf-jetbrains-mono-nerd 
 
-ttf-jetbrains-mono-nerd 3.4.0-2
+waybar
 
-waybar 0.15.0-1
-
-yay-bin 12.5.7-1
+yay-bin 
 
 wlogout 
 
 hypridle
 
 hyprsunset
+
+ttf-roboto-mono
