@@ -2,9 +2,9 @@
 {
      "position": "top",
     "height": 5,
-    "modules-left": ["hyprland/workspaces", "hyprland/mode", "custom/media","tray"],
+    "modules-left": ["hyprland/workspaces", "hyprland/mode", "custom/media"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["bluetooth","pulseaudio", "network", "backlight", "hyprland/language", "clock"],
+    "modules-right": ["pulseaudio", "tray", "backlight", "hyprland/language", "clock"],
     "hyprland/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
@@ -42,7 +42,8 @@
         }
     },
     "tray": {
-        "spacing": 12
+        "spacing": 10,
+        "icon-size": 14,
     },
     "clock": {
         "format": " {:%H:%M}",
@@ -76,7 +77,7 @@
         "on-scroll-up": "brightnessctl set +5%",
         "on-scroll-down": "current=$(brightnessctl g); [ $current -gt 50 ] && brightnessctl set 5%-",
         "format": "{percent}% {icon} ",
-        "format-icons": [" ","", "", ]
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
     },
     "battery": {
         "states": {
@@ -93,7 +94,8 @@
         "bat": "BAT2"
     },
     "hyprland/window": {
-        "max-length": 50
+        "max-length": 50,
+        "tooltip": false,
     },
 
     "network": {
@@ -119,9 +121,9 @@
         "format-source-muted": "",
         "format-icons": {
             "default": [
-                " ",
-                " ",
-                "  "
+                "",
+                "",
+                " "
             ]
       },
       "on-click": "pavucontrol",
@@ -191,9 +193,7 @@
             "deactivated": ""
         }
     },
-    "tray": {
-        "spacing": 12
-    },
+
     "clock": {
         "format": " {:%H:%M}",
         "format-alt": " {:%d-%m-%Y}",
@@ -226,7 +226,7 @@
         "on-scroll-up": "brightnessctl set +5%",
         "on-scroll-down": "current=$(brightnessctl g); [ $current -gt 50 ] && brightnessctl set 5%-",
         "format": "{percent}% {icon} ",
-        "format-icons": ["", ""]
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
     },
     "battery": {
         "states": {
@@ -267,9 +267,9 @@
         "format-source-muted": "",
         "format-icons": {
             "default": [
-                " ",
-                " ",
-                "  "
+                "",
+                "",
+                ""
             ]
       },
       "on-click": "pavucontrol",
